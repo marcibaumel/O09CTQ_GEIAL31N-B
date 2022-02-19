@@ -1,0 +1,16 @@
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.Calculator.resources
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.csproj.GenerateResource.cache
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.AssemblyInfoInputs.cache
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.AssemblyInfo.cs
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.csproj.CoreCompileInputs.cache
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\bin\Debug\net6.0-windows\Calculator.exe
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\bin\Debug\net6.0-windows\Calculator.deps.json
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\bin\Debug\net6.0-windows\Calculator.runtimeconfig.json
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\bin\Debug\net6.0-windows\Calculator.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\bin\Debug\net6.0-windows\ref\Calculator.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\bin\Debug\net6.0-windows\Calculator.pdb
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\ref\Calculator.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.pdb
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Calculator\Calculator\obj\Debug\net6.0-windows\Calculator.genruntimeconfig.cache

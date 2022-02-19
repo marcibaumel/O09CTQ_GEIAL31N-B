@@ -1,0 +1,17 @@
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.csproj.AssemblyReference.cache
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.Form1.resources
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.csproj.GenerateResource.cache
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.GeneratedMSBuildEditorConfig.editorconfig
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.AssemblyInfoInputs.cache
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.AssemblyInfo.cs
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.csproj.CoreCompileInputs.cache
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\bin\Debug\net6.0-windows\Gyak02.exe
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\bin\Debug\net6.0-windows\Gyak02.deps.json
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\bin\Debug\net6.0-windows\Gyak02.runtimeconfig.json
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\bin\Debug\net6.0-windows\Gyak02.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\bin\Debug\net6.0-windows\ref\Gyak02.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\bin\Debug\net6.0-windows\Gyak02.pdb
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\ref\Gyak02.dll
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.pdb
+C:\LOCAL_REPOS\Egyetem\6-FÉLÉV\Haladó C#\0215\Gyak02\Gyak02\obj\Debug\net6.0-windows\Gyak02.genruntimeconfig.cache
