@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d7174abd-47a0-4458-8e20-1531511f8734": {
+      "ProjectGuid": "d7174abd-47a0-4458-8e20-1531511f8734",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 0
+    },
+    "55f6a82f-e648-4f67-8f22-d935e006ad90": {
+      "ProjectGuid": "55f6a82f-e648-4f67-8f22-d935e006ad90",
+      "DisplayName": "Services",
+      "ColorIndex": 1
+    },
+    "2d29a494-9227-4367-af9a-941dff1b9d28": {
+      "ProjectGuid": "2d29a494-9227-4367-af9a-941dff1b9d28",
+      "DisplayName": "WPF",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
