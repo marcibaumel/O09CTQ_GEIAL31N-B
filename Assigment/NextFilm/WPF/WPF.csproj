@@ -7,4 +7,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="DTO\" />
+    <Folder Include="Controller\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
 </Project>

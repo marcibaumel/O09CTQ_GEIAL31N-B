@@ -7,4 +7,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\FilmServices\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\UserServices\" />
+  </ItemGroup>
+
 </Project>
