@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\REPOS\\O09CTQ_GEIAL31N-B\\Assigment\\NextFilm\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
         "projectPath": "C:\\REPOS\\O09CTQ_GEIAL31N-B\\Assigment\\NextFilm\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Baumel Márton\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
         "outputPath": "C:\\REPOS\\O09CTQ_GEIAL31N-B\\Assigment\\NextFilm\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Baumel Márton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marci\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
