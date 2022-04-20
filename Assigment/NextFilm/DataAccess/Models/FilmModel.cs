@@ -3,8 +3,9 @@
 namespace DataAccess.Models
 {
     [Table("FilmTable")]
-    public class FilmModel : BaseModel
+    public class FilmModel
     {
+        public Guid FilmId { get; set; }
         public string Title { get; set; }
         public string Plot { get; set; }
         public DateTime RealeaseDate { get; set; }
@@ -13,8 +14,9 @@ namespace DataAccess.Models
         public Boolean IsActive { get; set; }
         public DateTimeOffset CreatedDate { get; set; }
 
-        public FilmModel(string title, string plot, DateTime realeaseDate, string actors, string poster, bool isActive, DateTimeOffset createdDate)
+        public FilmModel(Guid filmId, string title, string plot, DateTime realeaseDate, string actors, string poster, bool isActive, DateTimeOffset createdDate)
         {
+            FilmId = filmId;
             Title = title ?? throw new ArgumentNullException(nameof(title));
             Plot = plot ?? throw new ArgumentNullException(nameof(plot));
             RealeaseDate = realeaseDate;
