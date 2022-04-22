@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "LaUvsGvuZmwbEwad/kSkM8plXpUxQRQZA7UvJUzl9PgTYziiR2C9mpw3Boyxd1k038I4Bf4wmbym+IFNyyShcw==",
+  "success": true,
+  "projectFilePath": "C:\\REPOS\\O09CTQ_GEIAL31N-B\\Assigment\\NextFilm\\NextFilm.WPF\\NextFilm.WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marci\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\marci\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace NextFilm.DataAccess.Models
 {
-    public class User
+    public class User:BaseModel
     {
-        public int UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }

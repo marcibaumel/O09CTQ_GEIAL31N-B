@@ -1,0 +1,15 @@
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.csproj.AssemblyReference.cache
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.AssemblyInfoInputs.cache
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.AssemblyInfo.cs
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.csproj.CoreCompileInputs.cache
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\bin\Debug\net5.0\NextFilm.Services.deps.json
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\bin\Debug\net5.0\NextFilm.Services.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\bin\Debug\net5.0\ref\NextFilm.Services.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\bin\Debug\net5.0\NextFilm.Services.pdb
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\bin\Debug\net5.0\NextFilm.DataAccess.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\bin\Debug\net5.0\NextFilm.DataAccess.pdb
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.csproj.CopyComplete
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\ref\NextFilm.Services.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.Services\obj\Debug\net5.0\NextFilm.Services.pdb

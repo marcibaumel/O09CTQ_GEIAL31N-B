@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace NextFilm.DataAccess.Models
 {
-    public class Film
+    public class Film:BaseModel
     {
-        public int FilmId { get; set; }
         public string Title { get; set; }
         public string Poster { get; set; }
         public bool IsWatched { get; set; }

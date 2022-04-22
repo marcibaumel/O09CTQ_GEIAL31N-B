@@ -21,7 +21,7 @@ namespace NextFilm.DataAccess.Migrations
 
             modelBuilder.Entity("NextFilm.DataAccess.Models.Film", b =>
                 {
-                    b.Property<int>("FilmId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -44,7 +44,7 @@ namespace NextFilm.DataAccess.Migrations
                     b.Property<int?>("UserId")
                         .HasColumnType("int");
 
-                    b.HasKey("FilmId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
@@ -53,7 +53,7 @@ namespace NextFilm.DataAccess.Migrations
 
             modelBuilder.Entity("NextFilm.DataAccess.Models.User", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -67,7 +67,7 @@ namespace NextFilm.DataAccess.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
                 });
