@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NextFilm.Services.FilmService
 {
-    public interface IFilmService
+    public class FilmService:IFilmService
     {
     }
 }

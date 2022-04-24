@@ -8,4 +8,8 @@
     <ProjectReference Include="..\NextFilm.DataAccess\NextFilm.DataAccess.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="OmdbServices\" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,4 @@
-﻿using NextFilm.WPF.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,27 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NextFilm.WPF
+namespace NextFilm.WPF.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for FilmList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class FilmList : Page
     {
-        public MainWindow()
+        public FilmList()
         {
             InitializeComponent();
-            
-        }
-
-        private void BtnClickLogin(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Login();
-        }
-
-        private void BtnClickFilmList(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new FilmList();
         }
     }
 }

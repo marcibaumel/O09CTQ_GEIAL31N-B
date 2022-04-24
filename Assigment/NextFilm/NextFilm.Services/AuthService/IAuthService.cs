@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NextFilm.Services.FilmService
+namespace NextFilm.Services.AuthService
 {
-    public interface IFilmService
+    public interface IAuthService
     {
     }
 }

@@ -24,3 +24,7 @@ C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-wind
 C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-windows\System.Runtime.CompilerServices.Unsafe.dll
 C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\obj\Debug\net5.0-windows\NextFilm.WPF.csproj.CopyComplete
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\obj\Debug\net5.0-windows\Pages\FilmList.g.cs
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\obj\Debug\net5.0-windows\Pages\Login.g.cs
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\obj\Debug\net5.0-windows\Pages\FilmList.baml
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\obj\Debug\net5.0-windows\Pages\Login.baml
