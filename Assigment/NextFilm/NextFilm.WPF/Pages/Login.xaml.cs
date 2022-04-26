@@ -20,13 +20,10 @@ namespace NextFilm.WPF.Pages
     /// </summary>
     public partial class Login : Page
     {
-
-        
-
+        //TODO: function 
         public Login()
         {
-            InitializeComponent();
-            
+            InitializeComponent();  
         }
 
         private void BtnClickLogin(object sender, RoutedEventArgs e)
