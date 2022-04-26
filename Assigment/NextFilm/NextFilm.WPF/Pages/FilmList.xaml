@@ -5,10 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NextFilm.WPF.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="400" d:DesignWidth="800"
       Title="FilmList">
 
     <Grid>
-        <TextBlock Text="Film list page" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24"/>
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
+            <Button Content="Logout" MinWidth="100" Margin="650,0,0,0" Click="BtnClickLogout" HorizontalAlignment="Center"/>
+        </StackPanel>
+        
     </Grid>
 </Page>

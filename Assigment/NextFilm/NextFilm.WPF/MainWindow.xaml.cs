@@ -24,17 +24,7 @@ namespace NextFilm.WPF
         public MainWindow()
         {
             InitializeComponent();
-            
-        }
-
-        private void BtnClickLogin(object sender, RoutedEventArgs e)
-        {
             Main.Content = new Login();
-        }
-
-        private void BtnClickFilmList(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new FilmList();
         }
     }
 }

@@ -20,7 +20,8 @@ namespace NextFilm.WPF.Pages
     /// </summary>
     public partial class Login : Page
     {
-       
+
+        
 
         public Login()
         {
@@ -30,8 +31,20 @@ namespace NextFilm.WPF.Pages
 
         private void BtnClickLogin(object sender, RoutedEventArgs e)
         {
+            FilmList filmListPage = new FilmList();
+
+            //Go to the film list page
             MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
-            objMainWindows.Main.Navigate(FilmList);
+            objMainWindows.Main.Navigate(filmListPage);
         }
+
+        private void BtnClickRegistration(object sender, RoutedEventArgs e)
+        {
+            Registration registrationPage = new Registration();
+            MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
+            objMainWindows.Main.Navigate(registrationPage);
+        }
+
+        
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\App.xaml
-3-24912995
+4-838430740
 
-7-692504988
+81873569019
 195-560379699
-MainWindow.xaml;Pages\FilmList.xaml;Pages\Login.xaml;
+MainWindow.xaml;Pages\FilmList.xaml;Pages\Login.xaml;Pages\Registration.xaml;
 
-True
+False
 

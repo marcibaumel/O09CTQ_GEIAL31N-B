@@ -15,14 +15,19 @@ using System.Windows.Shapes;
 
 namespace NextFilm.WPF.Pages
 {
-    /// <summary>
-    /// Interaction logic for FilmList.xaml
-    /// </summary>
     public partial class FilmList : Page
     {
+        private Login loginPage = new Login();
+
         public FilmList()
         {
             InitializeComponent();
+        }
+
+        private void BtnClickLogout(object sender, RoutedEventArgs e)
+        {
+            MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
+            objMainWindows.Main.Navigate(loginPage);
         }
     }
 }
