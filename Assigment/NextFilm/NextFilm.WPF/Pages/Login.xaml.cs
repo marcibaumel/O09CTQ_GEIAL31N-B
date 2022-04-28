@@ -1,5 +1,6 @@
 ﻿using NextFilm.DataAccess;
 using NextFilm.Services.UserService;
+using NextFilm.WPF.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,12 @@ namespace NextFilm.WPF.Pages
             //Go to the film list page
             if (checkUser(email, password))
             {
-                FilmList filmListPage = new FilmList();
+                string userName = userService.GetUserByEmail(email).Name;
+                MessageBox.Show("Welcome "+userName, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                User user = new User(email, password);
+
+                FilmList filmListPage = new FilmList(user);
                 MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
                 objMainWindows.Main.Navigate(filmListPage);
             }
@@ -57,13 +63,11 @@ namespace NextFilm.WPF.Pages
             {
                 if (user == null || !user.Password.Equals(password))
                 {
+                    MessageBox.Show("Something wrong with your data", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
                     return false;
                 }
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch (Exception ex) { Console.WriteLine(ex); }
 
             return true;
 

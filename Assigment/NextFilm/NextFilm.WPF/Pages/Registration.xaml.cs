@@ -39,6 +39,11 @@ namespace NextFilm.WPF.Pages
             {
                 User user = new User(name, email, password);
                 userService.Create(user.convertUserDtoToUser());
+                MessageBox.Show(name+" added successfully", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                FilmList filmListPage = new FilmList(user);
+                MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
+                objMainWindows.Main.Navigate(filmListPage);
             } 
         }
 
@@ -47,6 +52,10 @@ namespace NextFilm.WPF.Pages
             bool result = false;
             if (userService.GetUserByEmail(email) == null && characterCheck(name, email, password) && emailFormatCheck(email)) {
                 result = true;
+            }
+            if (result.Equals(false))
+            {
+                MessageBox.Show("Something wrong (Minimum length 2 character, Check email format)", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             return result;
         }

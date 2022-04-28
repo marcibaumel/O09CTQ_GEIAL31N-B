@@ -20,6 +20,12 @@ namespace NextFilm.WPF.DTO
             Password = password;
         }
 
+        public User(string email, string password)
+        {
+            Email = email;
+            Password = password;
+        }
+
         public NextFilm.DataAccess.Models.User convertUserDtoToUser() {
             return new NextFilm.DataAccess.Models.User(this.Name, this.Email, this.Password);
         }

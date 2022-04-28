@@ -1,5 +1,6 @@
 ﻿using NextFilm.DataAccess;
 using NextFilm.Services.UserService;
+using NextFilm.WPF.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace NextFilm.WPF.Pages
 {
     public partial class FilmList : Page
     {        
-        public FilmList()
+        public FilmList(User user)
         {
             InitializeComponent();
         }
@@ -29,6 +30,11 @@ namespace NextFilm.WPF.Pages
             Login loginPage = new Login();
             MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
             objMainWindows.Main.Navigate(loginPage);
+        }
+
+        private void BtnClickAddFilm(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
