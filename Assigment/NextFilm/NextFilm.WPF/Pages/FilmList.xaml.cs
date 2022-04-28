@@ -19,9 +19,14 @@ using System.Windows.Shapes;
 namespace NextFilm.WPF.Pages
 {
     public partial class FilmList : Page
-    {        
+    {
+        private User workingUser = null;
+        static UnitOfWork unitOfWork = new UnitOfWork();
+        private IUserService userService = new UserService(unitOfWork);
+
         public FilmList(User user)
         {
+            workingUser = user;
             InitializeComponent();
         }
 
@@ -32,17 +37,29 @@ namespace NextFilm.WPF.Pages
             objMainWindows.Main.Navigate(loginPage);
         }
 
-        private void BtnClickAddFilm(object sender, RoutedEventArgs e)
+        private void BtnClickShowAddFilm(object sender, RoutedEventArgs e)
         {
             if(addFilmPanel.Visibility == Visibility.Visible)
             {
                 addFilmPanel.Visibility = Visibility.Hidden;
+                showAddFilmBtn.Content = "Add Film";
             }
             else
             {
                 addFilmPanel.Visibility = Visibility.Visible;
+                showAddFilmBtn.Content = "Close Add Film";
             }
-            
+        }
+
+        private void BtnAddFilm(object sender, RoutedEventArgs e)
+        {
+            int userId = userService.GetUserByEmail(workingUser.Email).Id;
+
+            try
+            {
+
+            }
+            catch (Exception ex) { Console.WriteLine(ex); }
         }
     }
 }

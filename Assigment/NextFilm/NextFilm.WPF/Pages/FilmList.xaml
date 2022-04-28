@@ -14,16 +14,16 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Bottom">
-            <Button Content="Add Film" MinWidth="100" Margin="650,0,0,5" Click="BtnClickAddFilm" HorizontalAlignment="Center"/>
+            <Button x:Name="showAddFilmBtn" Content="Add Film" MinWidth="100" Margin="650,0,0,5" Click="BtnClickShowAddFilm" HorizontalAlignment="Center"/>
         </StackPanel>
 
-        <StackPanel Margin="156,20,156,40" Background="#EBEBEB" x:Name="addFilmPanel" Visibility="Visible">
+        <StackPanel Margin="156,20,156,40" Background="#EBEBEB" x:Name="addFilmPanel">
             <Label Content="Add Film:" Height="46" FontSize="20" FontWeight="Bold"/>
             <Label Content="Film Title:" Margin="10,0,10,0"/>
             <TextBox x:Name="filmTitleInput" TextWrapping="Wrap" Width="478" Height="35" Margin="10,0,10,0"/>
             <Label Content="Film Year:" Height="29" Margin="10,20,10,0"/>
             <TextBox x:Name="filmYearInput" TextWrapping="Wrap" Width="480" Height="39" Margin="10,0,10,0"/>
-            <Button x:Name="BtnClcikAddFilm" Content="Add" Height="42" Margin="50,60,50,0"/>
+            <Button x:Name="BtnClcikAddFilm" Click="BtnAddFilm" Content="Add" Height="42" Margin="50,60,50,0"/>
 
         </StackPanel>
 

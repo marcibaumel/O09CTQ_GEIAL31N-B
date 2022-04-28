@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NextFilm.DataAccess\NextFilm.DataAccess.csproj" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.8" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="OmdbServices\" />
+    <ProjectReference Include="..\NextFilm.DataAccess\NextFilm.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
