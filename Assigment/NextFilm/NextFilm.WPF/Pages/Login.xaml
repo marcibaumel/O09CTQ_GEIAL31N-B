@@ -11,7 +11,7 @@
     <Grid >
 
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button Content="Registration" MinWidth="100" Margin="10,0,0,0" Click="BtnClickRegistration"/>
+            <Button Content="Registration" MinWidth="100" Margin="10,5,0,0" Click="BtnClickRegistration"/>
         </StackPanel>
         
         <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="301,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" Height="42" FontSize="36"/>

@@ -10,7 +10,7 @@
 
     <Grid>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button Content="Login" MinWidth="100" Margin="10,0,0,0" Click="BtnClickLogin"/>
+            <Button Content="Login" MinWidth="100" Margin="10,5,0,0" Click="BtnClickLogin"/>
         </StackPanel>
         <Label Content="Name:" HorizontalAlignment="Left" Height="61" Margin="25,82,0,0" VerticalAlignment="Top" Width="152" FontSize="36"/>
         <Label Content="Email:" HorizontalAlignment="Left" Height="61" Margin="25,143,0,0" VerticalAlignment="Top" Width="152" FontSize="36"/>

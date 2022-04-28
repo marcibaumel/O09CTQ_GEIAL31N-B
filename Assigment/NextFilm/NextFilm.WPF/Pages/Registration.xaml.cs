@@ -55,7 +55,7 @@ namespace NextFilm.WPF.Pages
             }
             if (result.Equals(false))
             {
-                MessageBox.Show("Something wrong (Minimum length 2 character, Check email format)", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Something wrong (Minimum length 3 character, Check email format or email is already used)", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             return result;
         }
