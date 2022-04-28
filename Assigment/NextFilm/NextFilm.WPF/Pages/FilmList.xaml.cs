@@ -34,6 +34,14 @@ namespace NextFilm.WPF.Pages
 
         private void BtnClickAddFilm(object sender, RoutedEventArgs e)
         {
+            if(addFilmPanel.Visibility == Visibility.Visible)
+            {
+                addFilmPanel.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                addFilmPanel.Visibility = Visibility.Visible;
+            }
             
         }
     }

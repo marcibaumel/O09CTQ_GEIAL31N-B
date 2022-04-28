@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NextFilm.WPF"
         mc:Ignorable="d"
-        Title="NextFilm" Height="450" Width="800">
+        Title="NextFilm" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" BorderThickness="5,5,5,5" ResizeMode="NoResize">
     <Grid>
         <Frame x:Name="Main" Margin="0,0,0,0" NavigationUIVisibility="Hidden"/>
     </Grid>
