@@ -1,4 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NextFilm.DataAccess;
+using NextFilm.DataAccess.Models;
+using NextFilm.Services.DataServices;
+using NextFilm.Services.UserService;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -26,7 +30,16 @@ namespace NextFilm.WPF
         {
             IServiceCollection services = new ServiceCollection();
 
+            /*
+            services.AddSingleton<UnitOfWork>();
+            services.AddSingleton<IDataService<BaseModel>, GenericDataService<BaseModel>>();
+            services.AddSingleton<IDataService<User>, GenericDataService<User>>();
+
+            services.AddSingleton<IUserService, UserService>();
+            */
+
             return services.BuildServiceProvider();
+            
         }
     }
 }

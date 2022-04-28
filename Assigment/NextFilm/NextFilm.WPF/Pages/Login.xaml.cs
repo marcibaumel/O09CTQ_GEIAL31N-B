@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NextFilm.DataAccess;
+using NextFilm.Services.UserService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +17,11 @@ using System.Windows.Shapes;
 
 namespace NextFilm.WPF.Pages
 {
-    /// <summary>
-    /// Interaction logic for Login.xaml
-    /// </summary>
     public partial class Login : Page
     {
-        //TODO: function 
+        static UnitOfWork unitOfWork = new UnitOfWork();
+        private IUserService userService = new UserService(unitOfWork);
+
         public Login()
         {
             InitializeComponent();  
@@ -28,11 +29,18 @@ namespace NextFilm.WPF.Pages
 
         private void BtnClickLogin(object sender, RoutedEventArgs e)
         {
-            FilmList filmListPage = new FilmList();
+            string email = emailInput.Text;
+            string password = passwordInput.Password.ToString();
+            
 
             //Go to the film list page
-            MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
-            objMainWindows.Main.Navigate(filmListPage);
+            if (checkUser(email, password))
+            {
+                FilmList filmListPage = new FilmList();
+                MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
+                objMainWindows.Main.Navigate(filmListPage);
+            }
+            
         }
 
         private void BtnClickRegistration(object sender, RoutedEventArgs e)
@@ -40,6 +48,26 @@ namespace NextFilm.WPF.Pages
             Registration registrationPage = new Registration();
             MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
             objMainWindows.Main.Navigate(registrationPage);
+        }
+
+        private bool checkUser(string email, string password)
+        {
+            NextFilm.DataAccess.Models.User user = userService.GetUserByEmail(email);
+            try
+            {
+                if (user == null || !user.Password.Equals(password))
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return true;
+
+            
         }
 
         
