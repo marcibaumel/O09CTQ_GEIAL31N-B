@@ -67,3 +67,5 @@ C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-wind
 C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-windows\NextFilm.Services.dll
 C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-windows\NextFilm.DataAccess.pdb
 C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-windows\NextFilm.Services.pdb
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-windows\System.Net.Http.Formatting.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\bin\Debug\net5.0-windows\Newtonsoft.Json.Bson.dll

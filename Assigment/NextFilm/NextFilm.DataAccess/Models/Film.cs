@@ -14,5 +14,16 @@ namespace NextFilm.DataAccess.Models
         public DateTime ReleaseYear { get; set; }
         public DateTimeOffset AddedDate { get; set; }
         public User User { get; set; }
+
+        public Film(string title, string poster, bool isWatched, DateTime releaseYear, DateTimeOffset addedDate)
+        {
+            Title = title;
+            Poster = poster;
+            IsWatched = isWatched;
+            ReleaseYear = releaseYear;
+            AddedDate = addedDate;
+            User = null;
+        }
     }
+
 }
