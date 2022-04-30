@@ -28,8 +28,8 @@
         </StackPanel>
         
         
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel Margin="51,49,87,69">
+        
+        <StackPanel Margin="0,10,172,18">
             <ListView   Margin="10" Name="FilmBinding" 
                         ScrollViewer.VerticalScrollBarVisibility="Visible"
                         ScrollViewer.CanContentScroll="True">
@@ -38,17 +38,27 @@
                 <DataTemplate>
 
                      <Grid>
-                        <Image Height="150" Source="{Binding Poster}"/>
-                        <TextBlock Text="Name: " />
-                        <TextBlock Text="{Binding Title}" FontWeight="Bold" />
-                    </Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Height="150" Source="{Binding Poster}" Grid.Column="0"/>
+                            <TextBlock Text="Name: " Grid.Column="1"/>
+                            <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
+                            <Button Grid.Column="4">Watched</Button>
+                            <Button Grid.Column="5">Delete</Button>
+                     </Grid>
 
                  </DataTemplate>
                  
                 </ListView.ItemTemplate>
             </ListView>
         </StackPanel>
-        </ScrollViewer>
+       
 
 
 
