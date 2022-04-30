@@ -5,6 +5,7 @@ using NextFilm.Services.UserService;
 using NextFilm.WPF.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -42,6 +43,7 @@ namespace NextFilm.WPF.Pages
         {
             workingUser = user;
             InitializeComponent();
+            WelcomeLabel.Content = "Happy filming " + userService.GetUserByEmail(workingUser.Email);
             FilmBinding.ItemsSource = Films;
         }
 
@@ -59,14 +61,21 @@ namespace NextFilm.WPF.Pages
             objMainWindows.Main.Navigate(loginPage);
         }
 
-        private void BtnFimlWatched(object sender, RoutedEventArgs e)
+        private void BtnFilmWatched(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine(FilmBinding.SelectedItem);
 
+            NextFilm.DataAccess.Models.Film film = (NextFilm.DataAccess.Models.Film)FilmBinding.SelectedItem;
+            film.IsWatched = true;
+            filmService.Update(film.Id, film);
             FilmBinding.ItemsSource = getAllFilmFromUser();
         }
 
         private void BtnDeleteFilm(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine(FilmBinding.SelectedItem);
+            NextFilm.DataAccess.Models.Film film = (NextFilm.DataAccess.Models.Film)FilmBinding.SelectedItem;
+            filmService.Delete(film.Id);
             FilmBinding.ItemsSource = getAllFilmFromUser();
         }
 
@@ -97,27 +106,48 @@ namespace NextFilm.WPF.Pages
                     try 
                     {
                         searchedFilm = new Film(await omdbService.Load(filmTitleInput.Text, filmYearInput.Text));
+                        BtnClcikAddFilm.Content = "Working....";
+                        showAddFilmBtn.IsEnabled = false;
+                        BtnClcikAddFilm.IsEnabled = false;
                     } 
                     catch (Exception ex)
                     {
                         MessageBox.Show("Something wrong with the API", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
                         Console.WriteLine(ex);
                     }
-                   
-                    if(searchedFilm.Poster == null)
+
+                    try
                     {
-                        if(MessageBox.Show("Your inputs look okay but I couldn't find data from the internet, do you still want to add to your list?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+                        if (searchedFilm.Poster == null)
                         {
-                            MessageBox.Show("No film added to your list", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                            clearInputs();
+                            if (MessageBox.Show("Your inputs look okay but I couldn't find data from the internet, do you still want to add to your list?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+                            {
+                                MessageBox.Show("No film added to your list", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                                clearInputs();
+                            }
+                            else
+                            {
+                                NextFilm.DataAccess.Models.Film film = searchedFilm.converDtoToFilm();
+                                film.Title = filmTitleInput.Text;
+                                film.ReleaseYear = Convert.ToDateTime(filmYearInput.Text + "-01-01");
+                                film.Poster = @"C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\Resources\image.png";
+                                film.ReleaseYear = searchedFilm.ReleasedDate;
+                                film.User = userService.GetUserByEmail(workingUser.Email);
+                                film.ReleaseYear = Convert.ToDateTime(filmYearInput.Text + "-01-01");
+                                film.AddedDate = DateTime.Now;
+
+                                Console.WriteLine(film);
+                                filmService.Create(film);
+                                clearInputs();
+                                MessageBox.Show(film.Title + " added to your list", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                            }
                         }
                         else
                         {
                             NextFilm.DataAccess.Models.Film film = searchedFilm.converDtoToFilm();
-                            film.Title = searchedFilm.Title;
-                            film.ReleaseYear = searchedFilm.ReleasedDate;
+
                             film.User = userService.GetUserByEmail(workingUser.Email);
-                            film.ReleaseYear = Convert.ToDateTime(filmYearInput.Text + "-01-01");
+                            film.ReleaseYear = searchedFilm.ReleasedDate;
                             film.AddedDate = DateTime.Now;
 
                             Console.WriteLine(film);
@@ -126,19 +156,12 @@ namespace NextFilm.WPF.Pages
                             MessageBox.Show(film.Title + " added to your list", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        NextFilm.DataAccess.Models.Film film = searchedFilm.converDtoToFilm();
-                        
-                        film.User = userService.GetUserByEmail(workingUser.Email);
-                        film.ReleaseYear = Convert.ToDateTime(filmYearInput.Text + "-01-01");
-                        film.AddedDate = DateTime.Now;
-                        
-                        Console.WriteLine(film);
-                        filmService.Create(film);
-                        clearInputs();
-                        MessageBox.Show(film.Title+" added to your list", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Something wrong with the API", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+                        Console.WriteLine(ex);
                     }
+                   
                 }
                 
             }
@@ -146,6 +169,9 @@ namespace NextFilm.WPF.Pages
                 MessageBox.Show("Something wrong with the given data", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
                 Console.WriteLine(ex);
             }
+            BtnClcikAddFilm.Content = "Add film";
+            showAddFilmBtn.IsEnabled = true;
+            BtnClcikAddFilm.IsEnabled = true;
         }
 
         private bool checkInputs()
@@ -160,7 +186,7 @@ namespace NextFilm.WPF.Pages
                     actualYear = moment.Year;
 
                     int year = Int32.Parse(filmYearInput.Text);
-                    if(year < 1888 && year > actualYear)
+                    if(year < 1888 || year > actualYear)
                     {
                         MessageBox.Show("Something wrong with the given year please chek it again (Valid year is between 1888 + " + actualYear + ")", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
                         filmYearInput.Text = "";

@@ -8,8 +8,10 @@
       d:DesignHeight="400" d:DesignWidth="800"
       Title="FilmList">
 
+    
     <Grid Margin="0">
         <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+            <Label Name="WelcomeLabel"></Label>
             <Button Content="Logout" MinWidth="100" Margin="650,5,0,0" Click="BtnClickLogout" HorizontalAlignment="Center"/>
         </StackPanel>
 
@@ -31,7 +33,7 @@
         
         <StackPanel Margin="0,49,28,61" x:Name="filmList">
             <ListView   Margin="10" Name="FilmBinding" 
-                        ScrollViewer.VerticalScrollBarVisibility="Visible"
+                        
                         ScrollViewer.CanContentScroll="True" MaxHeight="235" MaxWidth="700"
                         BorderThickness="0">
                  <ListView.ItemTemplate>
@@ -50,14 +52,16 @@
                             <Image  Height="150" Source="{Binding Poster}" Grid.Column="0"/>
                             <TextBlock Text="Name: " Grid.Column="1"/>
                             <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
-                            <Button Grid.Column="4" Content="Watched" Height="60" Width="60" Click="BtnFilmWatched">
+                            <Button Grid.Column="4" Content="Watched" Height="60" Width="60" Click="BtnFilmWatched" IsEnabled="{Binding Path=IsSelected, 
+                                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>
                                     </Style>
                                 </Button.Resources>
                             </Button>
-                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm">
+                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm" IsEnabled="{Binding Path=IsSelected, 
+                                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>
