@@ -62,14 +62,32 @@ namespace NextFilm.WPF.Pages
         private async void BtnAddFilm(object sender, RoutedEventArgs e)
         {
             int userId = userService.GetUserByEmail(workingUser.Email).Id;
-            //addFilmPanel.Visibility == Visibility.Visible &&checkInputs()
+            
             try
             {
-                Film searchedFilm = new Film(await omdbService.Load(filmTitleInput.Text, filmYearInput.Text));
-                //var filmData = await omdbService.Load(filmTitleInput.Text, filmYearInput.Text);
-                Console.WriteLine(searchedFilm);
+                if (addFilmPanel.Visibility == Visibility.Visible && checkInputs())
+                {
+                    Film searchedFilm = new Film(await omdbService.Load(filmTitleInput.Text, filmYearInput.Text));
+                    if(searchedFilm.Poster == null)
+                    {
+                        if(MessageBox.Show("Your inputs look okay but I couldn't find data from the internet, do you still want to add to your list?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+                        {
+                            MessageBox.Show("No film added to your list", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                            clearInputs();
+                        }
+                        else
+                        {
+
+                        }
+                        
+                    }
+                }
+                
             }
-            catch (Exception ex) { Console.WriteLine(ex); }
+            catch (Exception ex) {
+                MessageBox.Show("Something wrong with the API", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+                Console.WriteLine(ex); 
+            }
         }
 
         private bool checkInputs()
@@ -95,6 +113,12 @@ namespace NextFilm.WPF.Pages
                 
             }
             return false;
+        }
+
+        private void clearInputs()
+        {
+            filmTitleInput.Text = "";
+            filmYearInput.Text = "";
         }
     }
 }
