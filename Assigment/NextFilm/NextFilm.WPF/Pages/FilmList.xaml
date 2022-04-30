@@ -50,14 +50,14 @@
                             <Image  Height="150" Source="{Binding Poster}" Grid.Column="0"/>
                             <TextBlock Text="Name: " Grid.Column="1"/>
                             <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
-                            <Button Grid.Column="4" Content="Watched" Height="60" Width="60">
+                            <Button Grid.Column="4" Content="Watched" Height="60" Width="60" Click="BtnFilmWatched">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>
                                     </Style>
                                 </Button.Resources>
                             </Button>
-                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60">
+                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="5"/>

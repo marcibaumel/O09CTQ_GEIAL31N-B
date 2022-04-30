@@ -59,6 +59,17 @@ namespace NextFilm.WPF.Pages
             objMainWindows.Main.Navigate(loginPage);
         }
 
+        private void BtnFimlWatched(object sender, RoutedEventArgs e)
+        {
+
+            FilmBinding.ItemsSource = getAllFilmFromUser();
+        }
+
+        private void BtnDeleteFilm(object sender, RoutedEventArgs e)
+        {
+            FilmBinding.ItemsSource = getAllFilmFromUser();
+        }
+
         private void BtnClickShowAddFilm(object sender, RoutedEventArgs e)
         {
             if(addFilmPanel.Visibility == Visibility.Visible)
