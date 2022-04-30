@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\NextFilm.DataAccess\NextFilm.DataAccess.csproj" />
     <ProjectReference Include="..\NextFilm.Services\NextFilm.Services.csproj" />
   </ItemGroup>
