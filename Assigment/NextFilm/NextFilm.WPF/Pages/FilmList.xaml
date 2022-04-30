@@ -12,7 +12,7 @@
     <Grid Margin="0">
         <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
             <Label Name="WelcomeLabel"></Label>
-            <Button Content="Logout" MinWidth="100" Margin="650,5,0,0" Click="BtnClickLogout" HorizontalAlignment="Center"/>
+            <Button Content="Logout" MinWidth="100" Margin="650,5,0,0" Click="BtnClickLogout" />
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Bottom">
@@ -40,7 +40,7 @@
                  
                 <DataTemplate>
 
-                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="150">
+                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="100">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="250" />
                                 <ColumnDefinition Width="50"/>
@@ -49,7 +49,7 @@
                                 <ColumnDefinition Width="100"/>
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
-                            <Image  Height="150" Source="{Binding Poster}" Grid.Column="0"/>
+                            <Image  Height="100" Source="{Binding Poster}" Grid.Column="0"/>
                             <TextBlock Text="Name: " Grid.Column="1"/>
                             <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
                             <Button Grid.Column="4" Content="Watched" Height="60" Width="60" Click="BtnFilmWatched" IsEnabled="{Binding Path=IsSelected, 

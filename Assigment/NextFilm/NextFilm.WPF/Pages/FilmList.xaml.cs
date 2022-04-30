@@ -43,7 +43,7 @@ namespace NextFilm.WPF.Pages
         {
             workingUser = user;
             InitializeComponent();
-            WelcomeLabel.Content = "Happy filming " + userService.GetUserByEmail(workingUser.Email);
+            WelcomeLabel.Content = "Happy filming " + userService.GetUserByEmail(workingUser.Email).Name;
             FilmBinding.ItemsSource = Films;
         }
 

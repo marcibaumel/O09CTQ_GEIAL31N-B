@@ -11,13 +11,13 @@
     <Grid >
 
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button Content="Registration" MinWidth="100" Margin="10,5,0,0" Click="BtnClickRegistration"/>
+            <Button Content="Registration" MinWidth="100" Margin="10,5,0,0" Click="BtnClickRegistration" FontWeight="Bold"/>
         </StackPanel>
-        
-        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="301,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" Height="42" FontSize="36"/>
-        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="301,164,0,0" VerticalAlignment="Top" Width="349" Height="42" FontSize="36"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="174,70,0,0" VerticalAlignment="Top" Height="58" Width="145" FontSize="36"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Margin="108,148,0,0" VerticalAlignment="Top" Height="77" Width="169" FontSize="36"/>
-        <Button x:Name="BtnLogin" Content="Login" Click="BtnClickLogin" HorizontalAlignment="Left" Margin="246,293,0,0" VerticalAlignment="Top" Height="51" Width="264"/>
+
+        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="301,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" Height="42" FontSize="30"/>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="301,164,0,0" VerticalAlignment="Top" Width="349" Height="42" FontSize="30"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="174,70,0,0" VerticalAlignment="Top" Height="58" Width="145" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="108,148,0,0" VerticalAlignment="Top" Height="77" Width="169" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="BtnLogin" Content="Login" Click="BtnClickLogin" HorizontalAlignment="Left" Margin="246,293,0,0" VerticalAlignment="Top" Height="51" Width="264" FontWeight="Bold"/>
     </Grid>
 </Page>

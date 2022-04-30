@@ -11,15 +11,15 @@
 
     <Grid>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button Content="Login" MinWidth="100" Margin="10,5,0,0" Click="BtnClickLogin"/>
+            <Button Content="Login" MinWidth="100" Margin="10,5,0,0" Click="BtnClickLogin" FontWeight="Bold"/>
         </StackPanel>
-        <Label Content="Name:" HorizontalAlignment="Left" Height="61" Margin="25,82,0,0" VerticalAlignment="Top" Width="152" FontSize="36"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Height="61" Margin="25,143,0,0" VerticalAlignment="Top" Width="152" FontSize="36"/>
-        <Label Content="Password:" HorizontalAlignment="Left" Height="61" Margin="25,209,0,0" VerticalAlignment="Top" Width="171" FontSize="36"/>
-        <Button x:Name="btnRegistration" Content="Registration" HorizontalAlignment="Left" Margin="222,280,0,0" VerticalAlignment="Top" Height="74" Width="316" AutomationProperties.HelpText="Press it to registraion" Click="btnClickRegistration"/>
-        <TextBox x:Name="nameInput" HorizontalAlignment="Left" Margin="182,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" TextAlignment="Left" FontSize="36"/>
-        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="182,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" FontSize="36"/>
-        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="222,217,0,0" VerticalAlignment="Top" Width="531" Height="45" FontSize="36"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Height="53" Margin="10,69,0,0" VerticalAlignment="Top" Width="128" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Height="61" Margin="10,130,0,0" VerticalAlignment="Top" Width="152" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Height="61" Margin="10,200,0,0" VerticalAlignment="Top" Width="171" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="btnRegistration" Content="Registration" HorizontalAlignment="Left" Margin="222,280,0,0" VerticalAlignment="Top" Height="74" Width="316" AutomationProperties.HelpText="Press it to registraion" Click="btnClickRegistration" FontWeight="Bold"/>
+        <TextBox x:Name="nameInput" HorizontalAlignment="Left" Margin="202,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" TextAlignment="Left" FontSize="30"/>
+        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="202,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" FontSize="30"/>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="202,208,0,0" VerticalAlignment="Top" Width="571" Height="45" FontSize="30"/>
 
     </Grid>
 </Page>
