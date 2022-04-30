@@ -30,16 +30,24 @@ namespace NextFilm.WPF.Pages
         private IUserService userService = new UserService(unitOfWork);
         private IFilmService filmService = new FilmService(unitOfWork);
         private IOmdbService omdbService = new OmdbService();
-        
+
+        public List<NextFilm.DataAccess.Models.Film> Films { 
+            get 
+            {
+                return getAllFilmFromUser();
+            }
+        }
 
         public FilmList(User user)
         {
             workingUser = user;
             InitializeComponent();
+            FilmBinding.ItemsSource = Films;
         }
 
-        public List<NextFilm.DataAccess.Models.Film> getAllFilmById()
+        public List<NextFilm.DataAccess.Models.Film> getAllFilmFromUser()
         {
+
             NextFilm.DataAccess.Models.User user = userService.GetUserByEmail(workingUser.Email);
             return filmService.GetAllFilmsByUser(user);
         }

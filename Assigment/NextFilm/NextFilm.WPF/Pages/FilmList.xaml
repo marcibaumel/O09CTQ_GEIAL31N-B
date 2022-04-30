@@ -26,6 +26,32 @@
             <Button x:Name="BtnClcikAddFilm" Click="BtnAddFilm" Content="Add" Height="42" Margin="50,60,50,0"/>
 
         </StackPanel>
+        
+        
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="51,49,87,69">
+            <ListView   Margin="10" Name="FilmBinding" 
+                        ScrollViewer.VerticalScrollBarVisibility="Visible"
+                        ScrollViewer.CanContentScroll="True">
+                 <ListView.ItemTemplate>
+                 
+                <DataTemplate>
+
+                     <Grid>
+                        <Image Height="150" Source="{Binding Poster}"/>
+                        <TextBlock Text="Name: " />
+                        <TextBlock Text="{Binding Title}" FontWeight="Bold" />
+                    </Grid>
+
+                 </DataTemplate>
+                 
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+        </ScrollViewer>
+
+
+
 
     </Grid>
 </Page>
