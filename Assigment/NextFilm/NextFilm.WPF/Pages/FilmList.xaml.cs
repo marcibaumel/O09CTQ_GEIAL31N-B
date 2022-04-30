@@ -64,10 +64,13 @@ namespace NextFilm.WPF.Pages
             if(addFilmPanel.Visibility == Visibility.Visible)
             {
                 addFilmPanel.Visibility = Visibility.Hidden;
+                filmList.Visibility = Visibility.Visible;
+                FilmBinding.ItemsSource = getAllFilmFromUser();
                 showAddFilmBtn.Content = "Add Film";
             }
             else
             {
+                filmList.Visibility = Visibility.Hidden;
                 addFilmPanel.Visibility = Visibility.Visible;
                 showAddFilmBtn.Content = "Close Add Film";
             }
