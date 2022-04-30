@@ -38,6 +38,12 @@ namespace NextFilm.WPF.Pages
             InitializeComponent();
         }
 
+        public List<NextFilm.DataAccess.Models.Film> getAllFilmById()
+        {
+            NextFilm.DataAccess.Models.User user = userService.GetUserByEmail(workingUser.Email);
+            return filmService.GetAllFilmsByUser(user);
+        }
+
         private void BtnClickLogout(object sender, RoutedEventArgs e)
         {
             Login loginPage = new Login();

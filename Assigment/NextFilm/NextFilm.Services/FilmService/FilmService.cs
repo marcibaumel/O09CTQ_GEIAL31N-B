@@ -44,5 +44,11 @@ namespace NextFilm.Services.FilmService
         {
             return _genericData.Update(id, entity);
         }
+
+        public List<Film> GetAllFilmsByUser(User user)
+        {
+            List<Film> entities = _unitOfWork.Films.Where(m => m.User.Equals(user)).ToList();
+            return entities;
+        }
     }
 }
