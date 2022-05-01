@@ -50,5 +50,11 @@ namespace NextFilm.Services.FilmService
             List<Film> entities = _unitOfWork.Films.Where(m => m.User.Equals(user) && !m.IsWatched).ToList();
             return entities;
         }
+
+        public List<Film> GetAllFilmsByUserIsWatched(User user)
+        {
+            List<Film> entities = _unitOfWork.Films.Where(m => m.User.Equals(user) && m.IsWatched).ToList();
+            return entities;
+        }
     }
 }

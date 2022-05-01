@@ -11,15 +11,45 @@
 
     <Grid>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
-            <Button Content="Login" MinWidth="100" Margin="10,5,0,0" Click="BtnClickLogin" FontWeight="Bold"/>
+            <Button Content="Login" MinWidth="100" Margin="10,5,0,0" Click="BtnClickLogin" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
         <Label Content="Name:" HorizontalAlignment="Left" Height="53" Margin="10,69,0,0" VerticalAlignment="Top" Width="128" FontSize="36" FontWeight="Bold"/>
         <Label Content="Email:" HorizontalAlignment="Left" Height="61" Margin="10,130,0,0" VerticalAlignment="Top" Width="152" FontSize="36" FontWeight="Bold"/>
         <Label Content="Password:" HorizontalAlignment="Left" Height="61" Margin="10,200,0,0" VerticalAlignment="Top" Width="171" FontSize="36" FontWeight="Bold"/>
-        <Button x:Name="btnRegistration" Content="Registration" HorizontalAlignment="Left" Margin="222,280,0,0" VerticalAlignment="Top" Height="74" Width="316" AutomationProperties.HelpText="Press it to registraion" Click="btnClickRegistration" FontWeight="Bold"/>
-        <TextBox x:Name="nameInput" HorizontalAlignment="Left" Margin="202,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" TextAlignment="Left" FontSize="30"/>
-        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="202,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" FontSize="30"/>
-        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="202,208,0,0" VerticalAlignment="Top" Width="571" Height="45" FontSize="30"/>
+        <Button x:Name="btnRegistration" Content="Registration" HorizontalAlignment="Left" Margin="222,280,0,0" VerticalAlignment="Top" Height="74" Width="316" AutomationProperties.HelpText="Press it to registraion" Click="btnClickRegistration" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox x:Name="nameInput" HorizontalAlignment="Left" Margin="202,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" TextAlignment="Left" FontSize="30">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="202,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" FontSize="30">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="202,208,0,0" VerticalAlignment="Top" Width="571" Height="45" FontSize="30">
+            <PasswordBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </PasswordBox.Resources>
+        </PasswordBox>
 
     </Grid>
 </Page>

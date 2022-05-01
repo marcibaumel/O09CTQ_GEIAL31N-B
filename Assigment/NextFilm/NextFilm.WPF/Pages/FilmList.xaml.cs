@@ -42,9 +42,13 @@ namespace NextFilm.WPF.Pages
         public FilmList(User user)
         {
             workingUser = user;
+
             InitializeComponent();
-            WelcomeLabel.Content = "Happy filming " + userService.GetUserByEmail(workingUser.Email).Name;
+
+            WelcomeLabel.Content = "Happy filming, " + userService.GetUserByEmail(workingUser.Email).Name;
             FilmBinding.ItemsSource = Films;
+            FilmHistoryBinding.ItemsSource = filmService.GetAllFilmsByUserIsWatched(userService.GetUserByEmail(workingUser.Email));
+            historyList.Visibility = Visibility.Hidden;
         }
 
         public List<NextFilm.DataAccess.Models.Film> getAllFilmFromUser()
@@ -59,6 +63,41 @@ namespace NextFilm.WPF.Pages
             Login loginPage = new Login();
             MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
             objMainWindows.Main.Navigate(loginPage);
+        }
+
+        private void BtnClickShowHistory(object sender, RoutedEventArgs e)
+        {
+            if(showHistory.Content.Equals("History"))
+            {
+                WelcomeLabel.Content = "Back to the future, " + userService.GetUserByEmail(workingUser.Email).Name;
+                filmList.Visibility = Visibility.Hidden;
+                showAddFilmBtn.Visibility = Visibility.Hidden;
+                FilmHistoryBinding.ItemsSource = filmService.GetAllFilmsByUserIsWatched(userService.GetUserByEmail(workingUser.Email));
+                historyList.Visibility = Visibility.Visible;
+
+                showHistory.Content = "Back to watchlist";
+            }
+            else
+            {
+                WelcomeLabel.Content = "Happy filming, " + userService.GetUserByEmail(workingUser.Email).Name;
+                filmList.Visibility = Visibility.Visible;
+                showAddFilmBtn.Visibility = Visibility.Visible;
+                FilmBinding.ItemsSource = Films;
+                historyList.Visibility = Visibility.Hidden;
+
+                showHistory.Content = "History";
+            }
+        }
+        
+
+        private void BtnFilmUnwatched(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine(FilmBinding.SelectedItem);
+
+            NextFilm.DataAccess.Models.Film film = (NextFilm.DataAccess.Models.Film)FilmHistoryBinding.SelectedItem;
+            film.IsWatched = false;
+            filmService.Update(film.Id, film);
+            FilmHistoryBinding.ItemsSource = filmService.GetAllFilmsByUserIsWatched(userService.GetUserByEmail(workingUser.Email));
         }
 
         private void BtnFilmWatched(object sender, RoutedEventArgs e)
@@ -118,7 +157,7 @@ namespace NextFilm.WPF.Pages
 
                     try
                     {
-                        if (searchedFilm.Poster == null)
+                        if (searchedFilm.Poster == null || searchedFilm.Title.Length != filmTitleInput.Text.Length)
                         {
                             if (MessageBox.Show("Your inputs look okay but I couldn't find data from the internet, do you still want to add to your list?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
                             {

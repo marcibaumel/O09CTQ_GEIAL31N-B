@@ -26,8 +26,8 @@ namespace NextFilm.WPF.Pages
         public Login()
         {
             InitializeComponent();
-            //emailInput.Text = "bela@email.com";
-            //passwordInput.Password = "bela";
+            emailInput.Text = "bela@email.com";
+            passwordInput.Password = "bela";
         }
 
         private void BtnClickLogin(object sender, RoutedEventArgs e)

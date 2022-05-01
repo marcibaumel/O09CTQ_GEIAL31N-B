@@ -11,5 +11,6 @@ namespace NextFilm.Services.FilmService
     public interface IFilmService: IDataService<Film>
     {
         List<Film> GetAllFilmsByUser(User user);
+        List<Film> GetAllFilmsByUserIsWatched(User user);
     }
 }
