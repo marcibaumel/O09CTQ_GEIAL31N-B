@@ -10,6 +10,9 @@
       >
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\Resources\background.png"/>
+        </Grid.Background>
         <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
             <Button Content="Login" MinWidth="100" Margin="10,5,0,0" Click="BtnClickLogin" FontWeight="Bold">
                 <Button.Resources>
@@ -35,6 +38,9 @@
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </TextBox.Resources>
+            <TextBox.Effect>
+                <DropShadowEffect ShadowDepth="10" BlurRadius="20" Opacity="1" Direction="135"/>
+            </TextBox.Effect>
         </TextBox>
         <TextBox x:Name="emailInput" HorizontalAlignment="Left" Margin="202,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="571" Height="45" FontSize="30">
             <TextBox.Resources>
@@ -42,6 +48,9 @@
                     <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </TextBox.Resources>
+            <TextBox.Effect>
+                <DropShadowEffect ShadowDepth="10" BlurRadius="20" Opacity="1" Direction="135"/>
+            </TextBox.Effect>
         </TextBox>
         <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="202,208,0,0" VerticalAlignment="Top" Width="571" Height="45" FontSize="30">
             <PasswordBox.Resources>
