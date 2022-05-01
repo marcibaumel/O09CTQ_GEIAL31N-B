@@ -12,7 +12,7 @@
     <Grid Margin="0">
         <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
             <Label Name="WelcomeLabel"></Label>
-            <Button Content="Logout" MinWidth="100" Margin="500,5,0,0" Click="BtnClickLogout">
+            <Button Content="Logout" MinWidth="100" Margin="500,5,0,0" Click="BtnClickLogout" Background="Yellow">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -77,7 +77,7 @@
                             <Image  Height="100" Source="{Binding Poster}" Grid.Column="0"/>
                             <TextBlock Text="Name: " Grid.Column="1"/>
                             <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
-                            <Button Grid.Column="4" Content="Watched" Height="60" Width="60" Click="BtnFilmWatched" IsEnabled="{Binding Path=IsSelected, 
+                            <Button Grid.Column="4" Content="Watched" Height="60" Width="60" Click="BtnFilmWatched" Background="ForestGreen" IsEnabled="{Binding Path=IsSelected, 
                                     RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
                                 <Button.Resources>
                                     <Style TargetType="Border">
@@ -85,7 +85,7 @@
                                     </Style>
                                 </Button.Resources>
                             </Button>
-                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm" IsEnabled="{Binding Path=IsSelected, 
+                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm" Background="PaleVioletRed" IsEnabled="{Binding Path=IsSelected, 
                                     RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
                                 <Button.Resources>
                                     <Style TargetType="Border">
@@ -122,7 +122,7 @@
                             <Image  Height="100" Source="{Binding Poster}" Grid.Column="0"/>
                             <TextBlock Text="Name: " Grid.Column="1"/>
                             <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
-                            <Button Grid.Column="4" Content="Unwatched" Height="60" Width="70" Click="BtnFilmUnwatched" IsEnabled="{Binding Path=IsSelected, 
+                            <Button Grid.Column="4" Content="Unwatched" Height="60" Width="70" Click="BtnFilmUnwatched" Background="LightYellow" IsEnabled="{Binding Path=IsSelected, 
                                     RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
                                 <Button.Resources>
                                     <Style TargetType="Border">
@@ -130,7 +130,7 @@
                                     </Style>
                                 </Button.Resources>
                             </Button>
-                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm" IsEnabled="{Binding Path=IsSelected, 
+                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm" Background="PaleVioletRed" IsEnabled="{Binding Path=IsSelected, 
                                     RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
                                 <Button.Resources>
                                     <Style TargetType="Border">

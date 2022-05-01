@@ -1,0 +1,15 @@
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\bin\Release\net5.0\NextFilm.DataAccess.deps.json
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\bin\Release\net5.0\NextFilm.DataAccess.runtimeconfig.json
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\bin\Release\net5.0\NextFilm.DataAccess.runtimeconfig.dev.json
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\bin\Release\net5.0\NextFilm.DataAccess.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\bin\Release\net5.0\ref\NextFilm.DataAccess.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\bin\Release\net5.0\NextFilm.DataAccess.pdb
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.csproj.AssemblyReference.cache
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.AssemblyInfoInputs.cache
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.AssemblyInfo.cs
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.csproj.CoreCompileInputs.cache
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\ref\NextFilm.DataAccess.dll
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.pdb
+C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.DataAccess\obj\Release\net5.0\NextFilm.DataAccess.genruntimeconfig.cache
