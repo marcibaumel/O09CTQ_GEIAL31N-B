@@ -45,7 +45,7 @@ namespace NextFilm.WPF.Pages
 
             InitializeComponent();
 
-            WelcomeLabel.Content = "Happy filming, " + userService.GetUserByEmail(workingUser.Email).Name;
+            WelcomeLabel.Content = "Welcome, " + userService.GetUserByEmail(workingUser.Email).Name;
             FilmBinding.ItemsSource = Films;
             FilmHistoryBinding.ItemsSource = filmService.GetAllFilmsByUserIsWatched(userService.GetUserByEmail(workingUser.Email));
             historyList.Visibility = Visibility.Hidden;
