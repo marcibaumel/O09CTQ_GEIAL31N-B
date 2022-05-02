@@ -60,6 +60,8 @@ namespace NextFilm.WPF.Pages
 
         private void BtnClickLogout(object sender, RoutedEventArgs e)
         {
+            string username = userService.GetUserByEmail(workingUser.Email).Name;
+            MessageBox.Show("Goodbye " + username, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             Login loginPage = new Login();
             MainWindow objMainWindows = (MainWindow)Window.GetWindow(this);
             objMainWindows.Main.Navigate(loginPage);
@@ -116,6 +118,7 @@ namespace NextFilm.WPF.Pages
             NextFilm.DataAccess.Models.Film film = (NextFilm.DataAccess.Models.Film)FilmBinding.SelectedItem;
             filmService.Delete(film.Id);
             FilmBinding.ItemsSource = getAllFilmFromUser();
+            FilmHistoryBinding.ItemsSource = filmService.GetAllFilmsByUserIsWatched(userService.GetUserByEmail(workingUser.Email));
         }
 
         private void BtnClickShowAddFilm(object sender, RoutedEventArgs e)
@@ -139,6 +142,9 @@ namespace NextFilm.WPF.Pages
 
         private async void BtnAddFilm(object sender, RoutedEventArgs e)
         {
+            showAddFilmBtn.IsEnabled = false;
+            BtnClcikAddFilm.IsEnabled = false;
+            btnLogut.IsEnabled = false;
             try
             {
                 if (addFilmPanel.Visibility == Visibility.Visible && checkInputs())
@@ -148,12 +154,13 @@ namespace NextFilm.WPF.Pages
                     {
                         searchedFilm = new Film(await omdbService.Load(filmTitleInput.Text, filmYearInput.Text));
                         BtnClcikAddFilm.Content = "Working....";
-                        showAddFilmBtn.IsEnabled = false;
-                        BtnClcikAddFilm.IsEnabled = false;
+                        showAddFilmBtn.Content = "Working....";
                     } 
                     catch (Exception ex)
                     {
                         MessageBox.Show("Something wrong with the API", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+                        searchedFilm = new Film();
+                        searchedFilm.Poster = null;
                         Console.WriteLine(ex);
                     }
 
@@ -202,7 +209,6 @@ namespace NextFilm.WPF.Pages
                         MessageBox.Show("Something wrong with the API", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
                         Console.WriteLine(ex);
                     }
-                   
                 }
                 
             }
@@ -211,8 +217,10 @@ namespace NextFilm.WPF.Pages
                 Console.WriteLine(ex);
             }
             BtnClcikAddFilm.Content = "Add film";
+            showAddFilmBtn.Content = "Close Add Film";
             showAddFilmBtn.IsEnabled = true;
             BtnClcikAddFilm.IsEnabled = true;
+            btnLogut.IsEnabled = true;
         }
 
         private bool checkInputs()

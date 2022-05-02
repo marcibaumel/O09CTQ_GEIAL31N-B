@@ -46,6 +46,8 @@ namespace NextFilm.WPF.DTO
             AddedDate = filmData.Result.AddedDate;
         }
 
-        
+        public Film()
+        {
+        }
     }
 }
