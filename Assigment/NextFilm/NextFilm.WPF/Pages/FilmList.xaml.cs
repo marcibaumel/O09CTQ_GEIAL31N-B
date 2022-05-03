@@ -121,6 +121,15 @@ namespace NextFilm.WPF.Pages
             FilmHistoryBinding.ItemsSource = filmService.GetAllFilmsByUserIsWatched(userService.GetUserByEmail(workingUser.Email));
         }
 
+        private void BtnHistoryDeleteFilm(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine(FilmBinding.SelectedItem);
+            NextFilm.DataAccess.Models.Film film = (NextFilm.DataAccess.Models.Film)FilmHistoryBinding.SelectedItem;
+            filmService.Delete(film.Id);
+            FilmBinding.ItemsSource = getAllFilmFromUser();
+            FilmHistoryBinding.ItemsSource = filmService.GetAllFilmsByUserIsWatched(userService.GetUserByEmail(workingUser.Email));
+        }
+
         private void BtnClickShowAddFilm(object sender, RoutedEventArgs e)
         {
             if(addFilmPanel.Visibility == Visibility.Visible)
