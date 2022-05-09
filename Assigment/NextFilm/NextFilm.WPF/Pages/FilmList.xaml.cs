@@ -154,6 +154,8 @@ namespace NextFilm.WPF.Pages
             showAddFilmBtn.IsEnabled = false;
             BtnClcikAddFilm.IsEnabled = false;
             btnLogut.IsEnabled = false;
+
+
             try
             {
                 if (addFilmPanel.Visibility == Visibility.Visible && checkInputs())
@@ -235,7 +237,7 @@ namespace NextFilm.WPF.Pages
         private bool checkInputs()
         {
             int actualYear = 0;
-
+            
             if (filmTitleInput.Text.Length > 0 || filmTitleInput.Text.Length < 51 || filmYearInput.Text.Length > 0 || filmYearInput.Text.Length < 5)
             {
                 try 
@@ -244,10 +246,10 @@ namespace NextFilm.WPF.Pages
                     actualYear = moment.Year;
 
                     int year = Int32.Parse(filmYearInput.Text);
-                    if(year < 1888 || year > actualYear)
+                    if(year < 1888 || year > actualYear || String.IsNullOrWhiteSpace(filmTitleInput.Text.ToString()))
                     {
-                        MessageBox.Show("Something wrong with the given year please chek it again (Valid year is between 1888 + " + actualYear + ")", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
-                        filmYearInput.Text = "";
+                        MessageBox.Show("Something wrong with the given year please chek it again (Valid year is between 1888 + " + actualYear + ") or the title more than 50 character", "Alert", MessageBoxButton.OK, MessageBoxImage.Error);
+                        clearInputs();
                         return false;
                     }
                 } 

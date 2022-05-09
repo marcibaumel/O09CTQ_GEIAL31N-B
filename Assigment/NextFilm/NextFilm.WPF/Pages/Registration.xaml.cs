@@ -62,7 +62,7 @@ namespace NextFilm.WPF.Pages
         
         private bool characterCheck(string name, string email, string password)
         {
-            if(name.Length > 2 && email.Length > 2 && password.Length > 2)
+            if(name.Length > 2 && name.Trim().Length != 0 && email.Length > 2 && password.Length > 2 && password.Trim().Length != 0)
             {
                 return true;
             }
