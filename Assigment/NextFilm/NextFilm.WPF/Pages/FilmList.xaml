@@ -1,0 +1,152 @@
+﻿<Page x:Class="NextFilm.WPF.Pages.FilmList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NextFilm.WPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      Title="FilmList">
+
+    
+    <Grid Margin="0">
+        <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
+            <Label x:Name="WelcomeLabel"/>
+            <Button x:Name="btnLogut" Content="Logout" MinWidth="100" Margin="550,5,0,0" Click="BtnClickLogout" Background="Yellow">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Bottom">
+            <Button x:Name="showAddFilmBtn" Content="Add Film" MinWidth="100" Margin="650,0,0,5" Click="BtnClickShowAddFilm" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="showHistory" Content="History" MinWidth="100" Margin="-400,0,0,5" Click="BtnClickShowHistory" HorizontalAlignment="Center">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Margin="156,20,156,40" Background="#EBEBEB" x:Name="addFilmPanel" Visibility="Hidden">
+            <Label Content="Add Film:" Height="46" FontSize="20" FontWeight="Bold"/>
+            <Label Content="Film Title:" Margin="10,0,10,0"/>
+            <TextBox x:Name="filmTitleInput" TextWrapping="Wrap" Width="478" Height="35" Margin="10,0,10,0"/>
+            <Label Content="Film Year:" Height="29" Margin="10,20,10,0"/>
+            <TextBox x:Name="filmYearInput" TextWrapping="Wrap" Width="480" Height="39" Margin="10,0,10,0"/>
+            <Button x:Name="BtnClcikAddFilm" Click="BtnAddFilm" Content="Add" Height="42" Margin="50,60,50,0">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </StackPanel>
+        
+        
+        
+        <StackPanel Margin="0,49,28,61" x:Name="filmList">
+            <ListView   Margin="10" Name="FilmBinding" 
+                        
+                        ScrollViewer.CanContentScroll="True" MaxHeight="235" MaxWidth="700"
+                        BorderThickness="0">
+                 <ListView.ItemTemplate>
+                 
+                <DataTemplate>
+
+                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="100">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250" />
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Image  Height="100" Source="{Binding Poster}" Grid.Column="0"/>
+                            <TextBlock Text="Name: " Grid.Column="1"/>
+                            <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
+                            <Button Grid.Column="4" Content="Watched" Height="60" Width="60" Click="BtnFilmWatched" Background="ForestGreen" IsEnabled="{Binding Path=IsSelected, 
+                                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnDeleteFilm" Background="PaleVioletRed" IsEnabled="{Binding Path=IsSelected, 
+                                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                     </Grid>
+
+                 </DataTemplate>
+                 
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Margin="10,49,28,61" x:Name="historyList" Background="Gray">
+            <ListView   Margin="10" Name="FilmHistoryBinding" 
+                        
+                        ScrollViewer.CanContentScroll="True" MaxHeight="235" MaxWidth="700"
+                        BorderThickness="0">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Height="100">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="250" />
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="120"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <Image  Height="100" Source="{Binding Poster}" Grid.Column="0"/>
+                            <TextBlock Text="Name: " Grid.Column="1"/>
+                            <TextBlock Text="{Binding Title}" FontWeight="Bold" Grid.Column="2"/>
+                            <Button Grid.Column="4" Content="Unwatched" Height="60" Width="70" Click="BtnFilmUnwatched" Background="LightYellow" IsEnabled="{Binding Path=IsSelected, 
+                                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            <Button Grid.Column="5" Content="Delete" Height="60" Width="60" Click="BtnHistoryDeleteFilm" Background="PaleVioletRed" IsEnabled="{Binding Path=IsSelected, 
+                                    RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}}">
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" Value="5"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                        </Grid>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+
+
+    </Grid>
+</Page>

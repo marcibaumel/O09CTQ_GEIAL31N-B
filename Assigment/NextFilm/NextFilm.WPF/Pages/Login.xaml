@@ -1,0 +1,46 @@
+﻿<Page x:Class="NextFilm.WPF.Pages.Login"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NextFilm.WPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800"
+      Title="Login">
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\REPOS\O09CTQ_GEIAL31N-B\Assigment\NextFilm\NextFilm.WPF\Resources\background.png"/>
+        </Grid.Background>
+        <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
+            <Button Content="Registration" MinWidth="100" Margin="10,5,0,0" Click="BtnClickRegistration" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+        <TextBox x:Name="emailInput" HorizontalAlignment="Left"  Margin="301,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" Height="42" FontSize="30">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </TextBox.Resources>
+            <TextBox.Effect>
+                <DropShadowEffect ShadowDepth="10" BlurRadius="20" Opacity="1" Direction="135"/>
+            </TextBox.Effect>
+        </TextBox>
+        <PasswordBox x:Name="passwordInput" HorizontalAlignment="Left" Margin="301,164,0,0" VerticalAlignment="Top" Width="349" Height="42" FontSize="30"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="174,70,0,0" VerticalAlignment="Top" Height="58" Width="145" FontSize="36" FontWeight="Bold"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="108,148,0,0" VerticalAlignment="Top" Height="77" Width="169" FontSize="36" FontWeight="Bold"/>
+        <Button x:Name="BtnLogin" Content="Login" Click="BtnClickLogin" HorizontalAlignment="Left" Margin="246,293,0,0" VerticalAlignment="Top" Height="51" Width="264" FontWeight="Bold">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Page>
